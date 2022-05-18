@@ -23,5 +23,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('createTask',TaskCreateListView.as_view()),
     path('registerTeacher',TeacherCreateListView.as_view()),
-    path('editTask',TaskRetrieveUpdateDestroyView.as_view()),
+    path('editTask/<int:id>',TaskRetrieveUpdateDestroyView.as_view()),
+    path('registerStudent',StudentCreateListView.as_view()),
 ]
