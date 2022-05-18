@@ -1,5 +1,5 @@
 from django.db import models
-
+import django.utils.timezone
 # Create your models here.
 
 class Teacher(models.Model):
@@ -12,7 +12,7 @@ class Teacher(models.Model):
         return self.name + ' - ' + self.dni
 
 class Course(models.Model):
-    CourseID = models.CharField(max_length=10, unique=True, primary_key=True, default='')
+    # CourseID = models.CharField(max_length=10, unique=True, primary_key=True, default='')
     teacher = models.ForeignKey(Teacher, on_delete=models.CASCADE, default='')
     name = models.CharField(max_length=100)
     description = models.TextField()
@@ -57,7 +57,7 @@ class TaskSubmission(models.Model):
     submission_date = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     submission_file = models.FileField(upload_to='submissions')
-    grade = models.IntegerField(default=0)
+    grade = models.IntegerField(null=True, blank=True)
     # grade_date = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):

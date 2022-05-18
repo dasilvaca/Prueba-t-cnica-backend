@@ -4,4 +4,4 @@ from ecosystem.models import TaskSubmission
 class TaskSubmissionSerializer(serializers.ModelSerializer):
     class Meta:
         model = TaskSubmission
-        fields = '__all__'
+        fields = ['task', 'student', 'submission_date', 'submission_file']

@@ -2,3 +2,9 @@ from .TaskCreateListView import TaskCreateListView
 from .TaskRetrieveUpdateDestroyView import TaskRetrieveUpdateDestroyView
 from .TeacherCreateListView import TeacherCreateListView
 from .StudentCreateListView import StudentCreateListView
+from .CourseCreateListView import CourseCreateListView
+from .InscribeStudentIntoCourse import InscribeStudentIntoCourse
+from .SubmitTaskView import SubmitTaskView
+from .GradeTaskView import GradeTaskView
+from .ShowSubmissionView import ShowSubmissionView
+from .EditSubmission import EditSubmission

@@ -21,8 +21,14 @@ from ecosystem.views import *
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('createTask',TaskCreateListView.as_view()),
     path('registerTeacher',TeacherCreateListView.as_view()),
-    path('editTask/<int:id>',TaskRetrieveUpdateDestroyView.as_view()),
     path('registerStudent',StudentCreateListView.as_view()),
+    path('createCourse',CourseCreateListView.as_view()),
+    path('inscribeStudent',InscribeStudentIntoCourse.as_view()),
+    path('createTask',TaskCreateListView.as_view()),
+    path('submitTask',SubmitTaskView.as_view()),
+    path('editTask/<int:id>',TaskRetrieveUpdateDestroyView.as_view()),
+    path('gradeTask/<int:pk>',GradeTaskView.as_view()),
+    path('editSubmission/<int:pk>',EditSubmission.as_view()),
+    path('showSubmission/<int:pk>',ShowSubmissionView.as_view()),
 ]
