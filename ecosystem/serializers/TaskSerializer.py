@@ -4,4 +4,5 @@ from ecosystem.models import Task
 class TaskSerializer(serializers.ModelSerializer):
     class Meta:
         model = Task
-        fields = '__all__'# ('id', 'name', 'description', 'created_at', 'updated_at', 'deadline', 'course')
+        fields = '__all__'
+        look_up_field = 'id'

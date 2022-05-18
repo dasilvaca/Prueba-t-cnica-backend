@@ -21,4 +21,5 @@ from ecosystem.views import *
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('createTask',TaskCreateListView.as_view()),
+    path('editTask',TaskRetrieveUpdateDestroyView.as_view()),
 ]
