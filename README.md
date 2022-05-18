@@ -14,3 +14,5 @@ Para hacer uso de la aplicación se requiere:
 1. Se hace la invitación para ver las rutas de cada endpoint en el apartado de PruebaTécnicaBackend/urls.py.
 
 1. Una vez ejecutado el servidor, se podrá accedar a cada una de las vistas y endpoints. El "body" de cada solicitud con el esqueleto del archivo JSON para el consumo de los servicios se encuentra en cada endpoint en el enlace de "raw data" provisto por Django REST framework
+
+1. Para observar el módelo entidad relación usado para la creacion de la aplicación, se puede consultar la imagen "E-R Diagram of model design of the database.jpeg"
