@@ -1,12 +1,13 @@
 from django.shortcuts import render
 from rest_framework import generics
-from ecosystem.serializers import TaskSerializer
-from ecosystem.models import Task
+from ecosystem.serializers import TeacherSerializer
+from ecosystem.models import Teacher
 
 
-class TaskCreateListView(generics.ListCreateAPIView):
-    queryset = Task.objects.all()
-    serializer_class = TaskSerializer
+class TeacherCreateListView(generics.ListCreateAPIView):
+    # queryset = Teacher().objects.all()
+    queryset = Teacher.objects.all()
+    serializer_class = TeacherSerializer
 
     def post(self, request, *args, **kwargs):
         serializer = self.get_serializer(data=request.data)

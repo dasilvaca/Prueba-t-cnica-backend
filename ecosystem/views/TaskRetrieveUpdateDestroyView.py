@@ -10,5 +10,10 @@ class TaskRetrieveUpdateDestroyView(generics.RetrieveUpdateDestroyAPIView):
 
     # def get_object(self):
     #     return Task.objects.get(id=self.kwargs['id'])
+
+    def post(self, request, *args, **kwargs):
+        serializer = self.get_serializer(data=request.data)
+        return self.update(request, *args, **kwargs)
+
     def get_queryset(self):
         return Task.objects.filter(id=self.kwargs['id'])

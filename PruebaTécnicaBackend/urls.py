@@ -15,11 +15,13 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from rest_framework.routers import DefaultRouter
 from ecosystem.views import *
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('createTask',TaskCreateListView.as_view()),
+    path('registerTeacher',TeacherCreateListView.as_view()),
     path('editTask',TaskRetrieveUpdateDestroyView.as_view()),
 ]
