@@ -5,6 +5,5 @@ from ecosystem.models import Course
 
 
 class CourseCreateListView(generics.ListCreateAPIView):
-    # queryset = Teacher().objects.all()
     queryset = Course.objects.all()
     serializer_class = CourseSerializer

@@ -5,6 +5,5 @@ from ecosystem.models import TaskSubmission
 
 
 class SubmitTaskView(generics.ListCreateAPIView):
-    # queryset = Teacher().objects.all()
     queryset = TaskSubmission.objects.all()
     serializer_class = TaskSubmissionSerializer

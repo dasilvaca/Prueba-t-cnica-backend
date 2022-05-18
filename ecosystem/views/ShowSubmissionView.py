@@ -4,12 +4,10 @@ from ecosystem.serializers import GradeSubmissionSerializer
 from ecosystem.models import TaskSubmission
 from rest_framework.response import Response
 from rest_framework import status
-# import FileWrapper
 from django.http import FileResponse
 from django.http import HttpResponse
 
 class ShowSubmissionView(generics.GenericAPIView):
-    # queryset = Teacher().objects.all()
     queryset = TaskSubmission.objects.all()
     serializer_class = GradeSubmissionSerializer
 
